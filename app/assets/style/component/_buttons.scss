@@ -1,0 +1,37 @@
+.btn-primary {
+    color: white;
+}
+.btn-outline-primary:hover {
+    color: $tertiary; // #000;
+    // background-color: #907A7B;
+    // border-color: #907A7B;
+}
+
+.btn-secondary {
+    color: white;
+    background-color: $secondary;
+    border-color: $secondary;
+}
+.btn-secondary:hover {
+    color: white;
+    background-color: $primary;
+    border-color: $primary;
+}
+
+.btn-tertiary {
+    color: $gray-600;
+    background-color: $tertiary;
+    border-color: $tertiary;
+    &:hover {
+        color: white;
+        background-color: $secondary;
+        border-color: $secondary;
+    }
+    &.active {
+        color: white;
+        background-color: $primary;
+        border-color: $primary;
+    }
+}
+
+

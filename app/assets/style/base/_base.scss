@@ -1,0 +1,23 @@
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+    margin-top: 0;
+    margin-bottom: 0; //0.5rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+p {
+    margin-bottom: 0;
+}
+ol, ul, dl {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style-type: disc; // 實心圓形
+}
+a {
+    display: inline-block;
+    transition: all .3s ease-in !important;
+}
+i {
+    display: block !important;
+}

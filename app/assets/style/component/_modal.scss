@@ -1,0 +1,11 @@
+.modal-dialog {
+    max-width: 57.5rem !important; // 920px;
+}
+.modal-img {
+    height: 10.3125rem; //165px
+    width: 10.3125rem; //165px
+    
+    @include media-breakpoint-up(md) {
+        height: 26.125rem; //418px
+    }
+}

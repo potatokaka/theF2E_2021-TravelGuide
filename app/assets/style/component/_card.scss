@@ -1,0 +1,80 @@
+.h-card-img {
+    height: 15.1875rem !important; // 243px;
+
+    @include media-breakpoint-up(md) {
+        height: 14.875rem !important; // 238px
+        // height: 100% !important;
+    }
+    @include media-breakpoint-up(lg) {
+        height: 15.1875rem !important; // 243px;
+    }
+}
+
+.img-rounded {
+    border-top-left-radius: calc(1rem - 1px) !important;
+    border-top-right-radius: calc(1rem - 1px) !important;
+
+    @include media-breakpoint-up(md) {
+        border-top-right-radius: 0rem !important;
+        border-bottom-left-radius: calc(1rem - 1px) !important;
+    }
+    @include media-breakpoint-up(lg) {
+        border-top-left-radius: calc(1rem - 1px) !important;
+        border-top-right-radius: calc(1rem - 1px) !important;
+        border-bottom-left-radius: 0rem !important;
+    }
+}
+
+.card {
+    &.active {
+        border: 0.25rem solid $secondary;
+        
+        .img-rounded {
+            border-top-left-radius: calc(1rem - 0.25rem) !important;
+            border-top-right-radius: calc(1rem - 0.25rem) !important;
+        
+            @include media-breakpoint-up(md) {
+                border-top-right-radius: 0rem !important;
+                border-bottom-left-radius: calc(1rem - 0.25rem) !important;
+            }
+            @include media-breakpoint-up(lg) {
+                border-top-left-radius: calc(1rem - 0.25rem) !important;
+                border-top-right-radius: calc(1rem - 0.25rem) !important;
+                border-bottom-left-radius: 0rem !important;
+            }
+        }
+    }
+}
+.card-secondary {
+    &.active {
+        border: 0.25rem solid white;
+        .material-icons-outlined {
+            opacity: 1  !important;
+        }
+    }
+}
+
+.h-card-course {
+    height: 12.25rem; // 196px
+}
+.h-card-space {
+    height: 21.875rem; // 350px
+
+    @include media-breakpoint-up(md) {
+        height: 13.125rem; // 210px
+    }
+    @include media-breakpoint-up(lg) {
+        height: 21.875rem; // 350px
+    }
+}
+
+.h-card-recommend {
+    height: 21.875rem; // 350px
+
+    @include media-breakpoint-up(md) {
+        height: 13.125rem; // 210px
+    }
+    @include media-breakpoint-up(lg) {
+        height: 21.875rem; // 350px
+    }
+}

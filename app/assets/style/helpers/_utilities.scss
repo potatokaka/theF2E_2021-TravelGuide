@@ -1,0 +1,187 @@
+// stylelint-disable indentation
+
+// Utilities
+
+$utilities: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+
+// 客製化-----------------------------------------
+$utilities: map-merge(
+  (
+    "line-height": (
+      property: line-height,
+      class: lh,
+      values: (
+        1: 1,
+        sm: $line-height-sm,      // 1.25
+        base: $line-height-base,  // 1.5
+        lg: $line-height-lg,      // 2
+        xl: 3.3333, // 客製
+        xxl: 5 // 客製
+      )
+    ),
+    "font-family": (
+      property: font-family,
+      class: ff,
+      values: (
+        arial: Arial,   // 客製字型
+        roboto: Roboto, // 客製字型
+      )
+    ),
+    "font-size": (
+      rfs: true,
+      property: font-size,
+      responsive: true, // 將字體大小改成 響應式的
+      class: fs,
+      values: $font-sizes
+    ),
+    "font-weight": (
+      property: font-weight,
+      class: fw,
+      values: (
+        light: $font-weight-light,
+        lighter: $font-weight-lighter,
+        normal: $font-weight-normal,
+        medium: 500, // 新增 medium 字重
+        bold: $font-weight-bold,
+        bolder: $font-weight-bolder
+      )
+    ),
+    "width": (
+      property: width,
+      responsive: true, // 將字體大小改成 響應式的
+      class: w,
+      values: (
+        25: 25%,
+        50: 50%,
+        75: 75%,
+        100: 100%,
+        auto: auto
+      )
+    ),
+    // 左邊線 RWD
+    "border-start": (
+      property: border-left,
+      responsive: true,
+      class: border-start,
+      values: (
+        null: $border-width solid $border-color,
+        0: 0,
+      )
+    ),
+    // 每個字都斷行
+    "word-spacing": (
+      property: word-spacing,
+      responsive: true, // 將字體大小改成 響應式的
+      class: word-spacing,
+      values: (
+        0: 0,   
+        xl: 9999999px, 
+      )
+    ),
+    // position 定位
+    "position": (
+      property: position,
+      responsive: true, // 改成響應式
+      values: static relative absolute fixed sticky
+    ),
+    "top": (
+      property: top,
+      responsive: true, // 改成響應式
+      values: $position-values
+    ),
+    "bottom": (
+      property: bottom,
+      responsive: true, // 改成響應式
+      values: $position-values
+    ),
+    "start": (
+      property: left,
+      responsive: true, // 改成響應式
+      class: start,
+      values: $position-values
+    ),
+    "end": (
+      property: right,
+      responsive: true, // 改成響應式
+      class: end,
+      values: $position-values
+    ),
+    "translate-middle": (
+      property: transform,
+      responsive: true, // 改成響應式
+      class: translate-middle,
+      values: (
+        null: translate(-50%, -50%),
+        x: translateX(-50%),
+        y: translateY(-50%),
+      )
+    ),
+    "rounded": (
+      property: border-radius,
+      class: rounded,
+      values: (
+        null: $border-radius,
+        0: 0,
+        1: $border-radius-sm,
+        2: $border-radius,
+        3: $border-radius-lg,
+        4: 1rem, // 新增
+        circle: 50%,
+        pill: $border-radius-pill
+      )
+    ),
+    "opacity": ( // 新增透明度
+    property: opacity,
+    responsive: true, // 改成響應式
+    values: (
+      0: 0,
+      25: .25,
+      50: .5,
+      75: .75,
+      100: 1,
+    )
+  )
+  ),
+  $utilities
+);
+
+.mb-minus-1 {
+  margin-bottom: -0.0625rem; // -1px
+}
+
+.mx-indent {
+  margin-left: 0.9375rem !important; 
+  margin-right: 0.9375rem !important; 
+}
+.ms-indent {
+  margin-left: 0.9375rem !important; 
+}
+.me-indent {
+  margin-right: 0.9375rem !important; 
+}
+
+.object-fit {
+  width: 100% ; 
+  height: 100% ; 
+  object-fit: cover ; 
+  object-position: center ; 
+}
+
+.icon-xl {
+  font-size: 2.75rem !important; // 44px
+}
+.navbar-light .navbar-toggler {
+  color: $primary !important;
+}
+
+.zindex-fixed {
+  z-index: $zindex-fixed;
+}
+.zindex-badge {
+  z-index: $zindex-fixed - 10;
+}
+
+.rotate-180 {
+  transform: rotate(180deg);
+}
